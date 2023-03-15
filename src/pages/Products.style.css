@@ -1,6 +1,6 @@
 .product_categories {
 	width: 20vw;
-	background-color: lightgray;
+	align-items: center;
 }
 
 .product_list {
