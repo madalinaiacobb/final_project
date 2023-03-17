@@ -54,9 +54,9 @@ function Products() {
 						</Button>
 					</div>
 					<div className='product_list'>
-						<h5>Search</h5>
 						<Input
-							className='w-25'
+							placeholder='Search'
+							className='w-25 mt-3'
 							value={textInput}
 							onChange={(event) => {
 								setTextInput(event.target.value);
