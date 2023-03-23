@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button } from "reactstrap";
+import { Button, Card, CardImgOverlay, CardImg, CardTitle } from "reactstrap";
 
 function Wishlist() {
 	// Pasul 2 - se creeaza o variabila de stare pentru datele noastre
@@ -24,12 +24,27 @@ function Wishlist() {
 
 	return (
 		<>
-			<h2>Wishlist Page</h2>
+			<div>
+				<Card inverse>
+					<CardImg
+						alt='Card image'
+						src='https://picsum.photos/id/535/900/270?'
+						style={{
+							height: 270,
+						}}
+						width='100%'
+					/>
+					<CardImgOverlay>
+						<CardTitle tag='h3'>Wishlist</CardTitle>
+					</CardImgOverlay>
+				</Card>
+			</div>
+			<h4>My Wishlist:</h4>
 			<ul>
 				{wishlistProducts.map((product, index) => {
 					return (
 						<li key={"product_" + index} className='mt-2'>
-							{product.title}
+							{product.title} : ${product.price}
 							<Button
 								className='ms-2'
 								size='sm'

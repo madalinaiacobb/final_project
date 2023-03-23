@@ -62,7 +62,7 @@ function Products() {
 								setTextInput(event.target.value);
 							}}
 						/>
-						<Row xs='4'>
+						<Row xs='5'>
 							{productList
 								.filter((product) => {
 									return (

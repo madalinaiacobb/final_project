@@ -22,11 +22,11 @@ function ProductComponent({ product }) {
 	};
 	return (
 		<Col className='mt-4'>
-			<Card>
-				<img alt='Sample' src={product.image} weight='200' height='300' />
+			<Card className='text-center' color='light' outline>
+				<img alt='Sample' src={product.image} weight='150' height='250' />
 				<CardBody>
 					<CardTitle tag='h4'>{product.title}</CardTitle>
-					<CardText>{product.description}</CardText>
+					<CardText>${product.price}</CardText>
 					<Button
 						color='dark'
 						size='sm'

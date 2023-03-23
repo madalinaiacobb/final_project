@@ -1,13 +1,13 @@
 .navbar_product {
 	height: 7vh;
 	width: 100vw;
-	background-color: black;
 	display: flex;
 	align-items: center;
+	margin: 0;
 }
 
 .navbar_product a {
-	color: whitesmoke;
+	color: black;
 	font-size: 18px;
 	text-decoration: none;
 	margin: 10px;
