@@ -21,13 +21,16 @@ function ProductComponent({ product }) {
 		}
 	};
 	return (
-		<Col className='mt-4'>
-			<Card className='text-center' color='light' outline>
+		<Col className='mt-4' style={{ minHeight: "550px" }}>
+			<Card className='text-center' style={{ minHeight: "100%" }}>
 				<img alt='Sample' src={product.image} weight='150' height='250' />
-				<CardBody>
-					<CardTitle tag='h4'>{product.title}</CardTitle>
-					<CardText>${product.price}</CardText>
+				<CardBody className='d-flex flex-column'>
+					<CardTitle tag='h4' className='mt-auto'>
+						{product.title}
+					</CardTitle>
+					<CardText className='mt-auto'>${product.price}</CardText>
 					<Button
+						className='mt-auto'
 						color='dark'
 						size='sm'
 						onClick={() => {

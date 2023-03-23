@@ -48,7 +48,7 @@ function Wishlist() {
 							<Button
 								className='ms-2'
 								size='sm'
-								color='danger'
+								color='dark'
 								onClick={() => {
 									onDelete(product.id);
 								}}>

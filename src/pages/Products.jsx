@@ -71,14 +71,9 @@ function Products() {
 									);
 								})
 								.filter((product) => {
-									return (
-										product.description
-											.toLowerCase()
-											.includes(textInput.toLowerCase()) ||
-										product.title
-											.toLowerCase()
-											.includes(textInput.toLowerCase())
-									);
+									return product.title
+										.toLowerCase()
+										.includes(textInput.toLowerCase());
 								})
 								.map((product, index) => {
 									return (

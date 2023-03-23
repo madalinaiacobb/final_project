@@ -2,10 +2,9 @@
 	height: 10vh;
 	width: 100vw;
 	display: flex;
-	background-color: rgb(149, 174, 169);
+	background-color: rgb(217, 232, 154);
 	position: relative;
 	justify-content: center;
-
 	bottom: 0;
 	align-items: center;
 }
