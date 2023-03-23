@@ -4,8 +4,15 @@ import "./Navigation.style.css";
 function Navigation() {
 	return (
 		<div className='navbar_product'>
-			<Link to='/home'> Home </Link>
-			<Link to='/products'>All products</Link>
+			<div>
+				<Link to='/home'> Home </Link>
+				<Link to='/products'>All products</Link>
+			</div>
+
+			<div className='name_web'>
+				<p>Outstock</p>
+			</div>
+
 			<Link to='/wishlist'>Wishlist</Link>
 		</div>
 	);

@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Wishlist from "./pages/Wishlist";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
@@ -12,9 +13,8 @@ function App() {
 				<Route path='/home' element={<Home />} />
 				<Route path='/products' element={<Products />} />
 				<Route path='/wishlist' element={<Wishlist />} />
-				<Route path='/*' element={<h1>NOT FOUND!</h1>} />
 			</Routes>
-			{/* FOOTER */}
+			<Footer />
 		</div>
 	);
 }

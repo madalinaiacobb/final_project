@@ -4,11 +4,21 @@
 	display: flex;
 	align-items: center;
 	margin: 0;
+	justify-content: space-around;
+	background-color: rgb(0, 0, 0);
+	font-weight: 400;
 }
 
 .navbar_product a {
-	color: black;
+	color: white;
 	font-size: 18px;
 	text-decoration: none;
 	margin: 10px;
+}
+
+.name_web {
+	color: rgb(217, 232, 154);
+	font-size: 22px;
+	margin-top: 15px;
+	font-weight: 900;
 }

@@ -1,0 +1,18 @@
+.footer_product {
+	height: 10vh;
+	width: 100vw;
+	display: flex;
+	background-color: rgb(149, 174, 169);
+	position: relative;
+	justify-content: center;
+
+	bottom: 0;
+	align-items: center;
+}
+
+.footer_product a {
+	color: black;
+	font-size: 15px;
+	text-decoration: none;
+	margin: 10px;
+}
