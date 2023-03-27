@@ -3,7 +3,7 @@
 	width: 100vw;
 	display: flex;
 	background-color: rgb(217, 232, 154);
-	position: relative;
+	position: fixed;
 	justify-content: center;
 	bottom: 0;
 	align-items: center;

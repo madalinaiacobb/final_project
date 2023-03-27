@@ -25,7 +25,7 @@ function Products() {
 	}, []);
 
 	return (
-		<>
+		<div className='product_page'>
 			{productList && categoryList ? (
 				<div className='d-flex'>
 					<div className='product_categories m-3 d-flex flex-column'>
@@ -89,7 +89,7 @@ function Products() {
 			) : (
 				<Spinner>Loading...</Spinner>
 			)}
-		</>
+		</div>
 	);
 }
 
