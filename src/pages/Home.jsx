@@ -7,7 +7,7 @@ function Home() {
 	const [trendingList, setTrendingList] = useState(null);
 
 	useEffect(() => {
-		fetch("'https://fakestoreapi.com/products?limit=8")
+		fetch("https://fakestoreapi.com/products?limit=8")
 			.then((res) => res.json())
 			.then((trendingListAPI) => setTrendingList(trendingListAPI));
 	}, []);
@@ -38,25 +38,29 @@ function Home() {
 					},
 				]}
 			/>
-			{trendingList ? (
-				<div className='home_page d-flex'>
-					<div className='categories_list'></div>
-					<div className='trending_list'>
-						<Row xs='4'>
-							{trendingList.map((trending, index) => {
-								return (
-									<TrendingComponent
-										product={trending}
-										key={"trending_" + index}
-									/>
-								);
-							})}
-						</Row>
-					</div>
+
+			<div className='home_page d-flex'>
+				<div className='categories_list'></div>
+
+				<div className='trending_list'>
+					{trendingList ? (
+						<>
+							<Row xs='4'>
+								{trendingList.map((trending, index) => {
+									return (
+										<TrendingComponent
+											trending={trending}
+											key={"trending_" + index}
+										/>
+									);
+								})}
+							</Row>
+						</>
+					) : (
+						<Spinner></Spinner>
+					)}
 				</div>
-			) : (
-				<Spinner></Spinner>
-			)}
+			</div>
 		</>
 	);
 }

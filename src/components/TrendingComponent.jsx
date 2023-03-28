@@ -1,6 +1,6 @@
 import { Card, CardBody, CardTitle, CardText, Button, Col } from "reactstrap";
 
-function TrendingComponent(trending) {
+function TrendingComponent({ trending }) {
 	return (
 		<Col className='mt-4' style={{ minHeight: "550px" }}>
 			<Card className='text-center' style={{ minHeight: "100%" }}>

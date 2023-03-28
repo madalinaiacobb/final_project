@@ -1,9 +1,6 @@
-.categories_list {
-	background-color: aqua;
-}
-
 .trending_list {
-	background-color: aquamarine;
+	width: 70vw;
+	justify-content: center;
 }
 
 .home_page {
