@@ -1,6 +1,10 @@
 .trending_list {
-	width: 70vw;
-	justify-content: center;
+	width: 65vw;
+	margin-left: 280px;
+}
+
+.titletrending_products {
+	margin-left: 370px;
 }
 
 .home_page {

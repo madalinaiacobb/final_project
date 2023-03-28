@@ -43,19 +43,22 @@ function Home() {
 				<div className='categories_list'></div>
 
 				<div className='trending_list'>
+					<div className='titletrending_products'>
+						<h3>Trending Products</h3>
+						<h5>List of top selling products:</h5>
+					</div>
+
 					{trendingList ? (
-						<>
-							<Row xs='4'>
-								{trendingList.map((trending, index) => {
-									return (
-										<TrendingComponent
-											trending={trending}
-											key={"trending_" + index}
-										/>
-									);
-								})}
-							</Row>
-						</>
+						<Row xs='4'>
+							{trendingList.map((trending, index) => {
+								return (
+									<TrendingComponent
+										trending={trending}
+										key={"trending_" + index}
+									/>
+								);
+							})}
+						</Row>
 					) : (
 						<Spinner></Spinner>
 					)}
