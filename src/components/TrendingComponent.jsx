@@ -1,6 +1,6 @@
 import { Card, CardBody, CardTitle, CardText, Button, Col } from "reactstrap";
 
-function ProductTrending() {
+function TrendingComponent() {
 	return (
 		<Col>
 			<Card
@@ -22,4 +22,4 @@ function ProductTrending() {
 	);
 }
 
-export default ProductTrending;
+export default TrendingComponent;
