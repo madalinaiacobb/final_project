@@ -1,3 +1,11 @@
+.categories_list {
+	background-color: aqua;
+}
+
+.trending_list {
+	background-color: aquamarine;
+}
+
 .home_page {
 	padding-bottom: 10vh;
 }

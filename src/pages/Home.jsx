@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { UncontrolledCarousel } from "reactstrap";
+import { Spinner, Row, UncontrolledCarousel } from "reactstrap";
 import TrendingComponent from "../components/TrendingComponent";
 import "./Home.style.css";
 
 function Home() {
 	const [trendingList, setTrendingList] = useState(null);
+
 	useEffect(() => {
 		fetch("'https://fakestoreapi.com/products?limit=8")
 			.then((res) => res.json())
@@ -12,7 +13,7 @@ function Home() {
 	}, []);
 
 	return (
-		<div className='home_page'>
+		<>
 			<UncontrolledCarousel
 				items={[
 					{
@@ -37,13 +38,26 @@ function Home() {
 					},
 				]}
 			/>
-
-			<div className='categories_list d-flex'></div>
-			<h4>Trending Products</h4>
-			<div className='trending_list d-flex '>
-				<TrendingComponent />
-			</div>
-		</div>
+			{trendingList ? (
+				<div className='home_page d-flex'>
+					<div className='categories_list'></div>
+					<div className='trending_list'>
+						<Row xs='4'>
+							{trendingList.map((trending, index) => {
+								return (
+									<TrendingComponent
+										product={trending}
+										key={"trending_" + index}
+									/>
+								);
+							})}
+						</Row>
+					</div>
+				</div>
+			) : (
+				<Spinner></Spinner>
+			)}
+		</>
 	);
 }
 export default Home;
