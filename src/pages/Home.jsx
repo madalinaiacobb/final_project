@@ -8,12 +8,13 @@ import {
 	Button,
 	CardBody,
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import TrendingComponent from "../components/TrendingComponent";
 import "./Home.style.css";
 
 function Home() {
 	const [trendingList, setTrendingList] = useState(null);
-	const [categoriesList, setCategoriesList] = useState(null);
+	const [categoriesList, setCategoriesList] = useState([]);
 
 	useEffect(() => {
 		fetch("https://fakestoreapi.com/products?limit=8")
@@ -55,19 +56,25 @@ function Home() {
 				{categoriesList.map((categories, index) => {
 					return (
 						<Row className='mt-2' key={"categories_" + index}>
-							<Card className='text-center' style={{ minHeight: "100%" }}>
+							<Card className='text-center ' style={{ minHeight: "100%" }}>
 								<img
 									alt='Sample'
 									src='https://picsum.photos/id/26/300/200'
 									weight='50'
 									height='150'
+									className='mt-2'
 								/>
 								<CardBody>
 									<CardTitle tag='h5' className='mt-auto'>
 										{categories}
 									</CardTitle>
 
-									<Button className='mt-2' color='dark' size='sm'>
+									<Button
+										className='mt-2'
+										color='dark'
+										size='sm'
+										tag={Link}
+										to='/products'>
 										Discover Now
 									</Button>
 								</CardBody>
@@ -78,7 +85,7 @@ function Home() {
 			</div>
 			<div className='home_page d-flex'>
 				<div className='trending_list'>
-					<div className='titletrending_products'>
+					<div className='titletrending_products mt-3'>
 						<h3>Trending Products</h3>
 						<h5>List of top selling products:</h5>
 					</div>
