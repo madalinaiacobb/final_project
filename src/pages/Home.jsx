@@ -52,7 +52,7 @@ function Home() {
 					},
 				]}
 			/>
-			<div className='categories_list m-3 d-flex flex-row'>
+			<div className='categories_list m-3 d-flex flex-sm-column flex-lg-row'>
 				{categoriesList.map((categories, index) => {
 					return (
 						<Row className='mt-2' key={"categories_" + index}>
@@ -91,7 +91,7 @@ function Home() {
 					</div>
 
 					{trendingList ? (
-						<Row xs='4'>
+						<Row xs='1' lg='4'>
 							{trendingList.map((trending, index) => {
 								return (
 									<TrendingComponent
