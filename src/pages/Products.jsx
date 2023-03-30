@@ -7,12 +7,8 @@ function Products() {
 	const [productList, setProductList] = useState(null);
 	const [categoryList, setCategoryList] = useState(null);
 
-	// Variabile de stare pt filtrari
-
 	const [textInput, setTextInput] = useState("");
 	const [selectedCategory, setSelectedCategory] = useState(null);
-
-	// Pasul de adaugare date din API
 
 	useEffect(() => {
 		fetch("https://fakestoreapi.com/products")

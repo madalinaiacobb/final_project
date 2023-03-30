@@ -59,7 +59,7 @@ function Home() {
 							<Card className='text-center ' style={{ minHeight: "100%" }}>
 								<img
 									alt='Sample'
-									src='https://picsum.photos/id/26/300/200'
+									src='https://picsum.photos/id/104/300/200'
 									weight='50'
 									height='150'
 									className='mt-2'

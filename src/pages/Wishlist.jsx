@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
-import { Button, Card, CardImgOverlay, CardImg, CardTitle } from "reactstrap";
+import {
+	Button,
+	Card,
+	CardImgOverlay,
+	CardImg,
+	CardTitle,
+	Table,
+} from "reactstrap";
 
 function Wishlist() {
-	// Pasul 2 - se creeaza o variabila de stare pentru datele noastre
-
 	const [wishlistProducts, setWishlistProducts] = useState([]);
 
-	// Pasul 1 - preluare date din localstorage
 	useEffect(() => {
 		const productsString = localStorage.getItem("produse");
 		if (productsString !== null) {
@@ -30,34 +34,45 @@ function Wishlist() {
 						alt='Card image'
 						src='https://picsum.photos/id/535/900/270?'
 						style={{
-							height: 270,
+							height: 300,
 						}}
 						width='100%'
 					/>
 					<CardImgOverlay>
-						<CardTitle tag='h3'>Wishlist</CardTitle>
+						<CardTitle tag='h3'>WISHLIST</CardTitle>
 					</CardImgOverlay>
 				</Card>
 			</div>
 			<h4>My Wishlist:</h4>
-			<ul>
+			<div>
 				{wishlistProducts.map((product, index) => {
 					return (
-						<li key={"product_" + index} className='mt-2'>
-							{product.title} : ${product.price}
-							<Button
-								className='ms-2'
-								size='sm'
-								color='dark'
-								onClick={() => {
-									onDelete(product.id);
-								}}>
-								Delete
-							</Button>
-						</li>
+						<Table
+							bordered
+							size='sm'
+							key={"product_" + index}
+							className='text-center'>
+							<thead>
+								<tr className='table-success'>
+									<th>{product.title}</th>
+									<th> ${product.price}</th>
+									<th>
+										<Button
+											className='ms-2 '
+											size='sm'
+											color='dark'
+											onClick={() => {
+												onDelete(product.id);
+											}}>
+											Delete
+										</Button>
+									</th>
+								</tr>
+							</thead>
+						</Table>
 					);
 				})}
-			</ul>
+			</div>
 		</>
 	);
 }
